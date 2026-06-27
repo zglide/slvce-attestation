@@ -1,0 +1,14 @@
+{
+  "head": "94dc1f4553932f4012f6f5b8d47ed228a9c80df9335237baa3ea0c3589eb3f26",
+  "count": 110,
+  "last_date": "2026-06-26",
+  "fields": [
+    "date",
+    "nav",
+    "capital",
+    "strategy",
+    "red"
+  ],
+  "algo": "sha256",
+  "recipe": "leaf=sha256(json{date,nav,capital,strategy,red} compact); chain=sha256(prev_chain+leaf); genesis prev=64*\"0\""
+}
