@@ -28,6 +28,15 @@ chain   = sha256( prev_chain + leaf )                        # genesis prev = 64
 The latest `chain` (the **head**) commits the whole history: change any past number
 and every chain hash from that day onward breaks.
 
+## Errata
+
+A published number is never edited. If a day turns out to have been attested from the
+wrong snapshot, a **new** record for that date is appended to the chain with one extra
+field, `supersedes` = the leaf of the record it corrects (hashed as
+`{"date","nav","capital","strategy","red","supersedes"}`). The superseded row, its hashes
+and its Bitcoin timestamp stay exactly as they were; readers take the latest record per
+date. Every erratum is listed in [`ERRATA.md`](ERRATA.md) with the reason.
+
 ## Verify it yourself
 
 ```bash

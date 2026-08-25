@@ -1,6 +1,6 @@
 {
-  "head": "32ea55b95ed2cb9002d951d1f83e0b26f4f460cbff8a26be49fafb3f21c400bf",
-  "count": 169,
+  "head": "2bf91e168a88d91580345ba0f543efc5f63a3f5691c3459f4171be2498c5e802",
+  "count": 203,
   "last_date": "2026-08-24",
   "fields": [
     "date",
@@ -8,6 +8,14 @@
     "capital",
     "strategy",
     "red"
+  ],
+  "errata_fields": [
+    "date",
+    "nav",
+    "capital",
+    "strategy",
+    "red",
+    "supersedes"
   ],
   "algo": "sha256",
   "recipe": "leaf=sha256(json{date,nav,capital,strategy,red} compact); chain=sha256(prev_chain+leaf); genesis prev=64*\"0\""
