@@ -15,6 +15,15 @@ positions.
 - **`head.json.ots`** — an [OpenTimestamps](https://opentimestamps.org) proof anchoring
   the head into the Bitcoin blockchain (trustless "this existed before block N")
 
+## AUM definition
+
+- **v1 (2026-03-09 → 2026-09-01):** `nav` = sum of all account balances (the trading book).
+- **v2 (from 2026-09-02):** `nav` = trading book **+ the mutual hedge (protection) pool**, valued at
+  its last daily mark. The pool's cash and options belong to the fund; moving capital between the
+  book and the pool is internal and does not change `nav`. Pool gains and losses show on the day they
+  are marked. v2 records carry `book_nav` and `pool_nav` next to the attested fields (informational,
+  not hashed). Earlier records are unchanged and still verify byte-for-byte on v1.
+
 ## How the chain works
 
 For each day, in published order:
