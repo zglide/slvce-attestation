@@ -1,0 +1,22 @@
+{
+  "head": "be6e27384244a192e5d978ad45d3cf431dfd04977652c1602c66a50a116e8f91",
+  "count": 249,
+  "last_date": "2026-10-13",
+  "fields": [
+    "date",
+    "nav",
+    "capital",
+    "strategy",
+    "red"
+  ],
+  "errata_fields": [
+    "date",
+    "nav",
+    "capital",
+    "strategy",
+    "red",
+    "supersedes"
+  ],
+  "algo": "sha256",
+  "recipe": "leaf=sha256(json{date,nav,capital,strategy,red} compact); chain=sha256(prev_chain+leaf); genesis prev=64*\"0\""
+}
